@@ -1,0 +1,100 @@
+<html>
+<head> 
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
+<title>Instituto de Medicina Tropical Pedro Kour&iacute</title>
+
+<script languaje="javasacript">
+<!--
+function Subir()
+{
+var formulario1="";
+var nombres=document.form1.nombres.value;
+var apels=document.form1.apels.value;
+var tvalor="";
+var b=document.form1.valor.length;
+for (a=0; a<b; a++)
+{
+  if (document.form1.valor[a].checked)
+  tvalor+=document.form1.valor[a].value+". ";
+}
+
+
+var prob=document.form1.prob.value;
+var coment=document.form1.coment.value;
+
+if ((nombres=="") || (apels==""))
+{
+alert("El nombre o los apellidos no tienen valor!!");
+return false;
+}
+
+
+formulario1="\Nombre: "+nombres+"\nApellidos: "+apels+"\nCalificación del sitio: "+tvalor+"\nPresentó problemas: "+prob+"\nComentario: "+coment;
+alert(formulario1);
+}
+//-->
+</script>
+<style>
+body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+        }
+</style>
+
+</head>
+<body>
+<form name="form1" methot="post" action="" align="center" style="background: #BCFDC6; border: solid #1A7B06; padding: 10px; scroll-behavior: no">
+<table border="0" cellspading="0" cellspacing="0" style="font-color: blue; font-family: Arial; font-size: 12;">
+<cols width="100"><cols width="700">
+<tr>
+<td colspan="2" align="center"> <h2 align="center"> Valore el sitio </h2> </td>
+<tr>
+  <tr>
+  <td> Ingresa el nombre: (*) </td>
+  <td> <input type="text" style="text-transform:Uppercase;" name="nombres" id="nombres" value="" placeholder="Nombres"> </td>
+</tr>
+<tr>
+  <td> Ingresa los apellidos: (*) </td>
+  <td> <input type="text" style="text-transform:Uppercase;" name="apels" id="apels" value="" ="100" placeholder="Apellidos"> </td>
+</tr>
+<tr>
+  <td> Ha tenido problemas durante el uso del sitio: </td>
+  <td> 
+    <input type="radio" name="prob" value="si"> Si &nbsp; &nbsp; 
+    <input type="radio" name="prob" value="no"> No
+  </td>
+</tr>
+<tr>
+  <td> Comente su problema brevemente: </td>
+  <td> <input type="text" name="coment" id="coment" value="" placeholder="Escriba aquí su comentario"> </td>
+</tr>
+	<tr>
+  <td valign="top"> Califique el sitio: </td>
+  <td> 
+    <input type="radio" name="valor" value="1"> 1 
+    <input type="radio" name="valor" value="2"> 2
+    <input type="radio" name="valor" value="3"> 3
+    <input type="radio" name="valor" value="4"> 4
+    <input type="radio" name="valor" value="5"> 5  
+    </td>
+</tr>
+
+
+<tr>
+  <td>&nbsp;</td>
+  <td> 
+    <button type="button" name="boton" onClick="Subir()"> Enviar </button>
+    &nbsp; &nbsp; &nbsp;
+    <button type="reset" name="botonR"> Cancelar </button>
+  </td>
+</tr>
+</table>
+
+<br>
+<p style= "color:red">Los campos con asteriscos (*) son obligatorios.
+</form>
+</body>
+</html>
